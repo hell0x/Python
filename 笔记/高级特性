@@ -1,0 +1,26 @@
+切片(Slice)
+	>>> L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
+	>>> L[0:3]
+	['Michael', 'Sarah', 'Tracy']
+	如果第一个索引是0，还可以省略
+
+迭代(Iteration)
+	for key in d:
+	for value in d.values():
+	for k, v in d.items():
+	判断对象是否可迭代
+	>>> from collections import Iterable
+	>>> isinstance('abc', Iterable) # str是否可迭代
+
+	>>> for i, value in enumerate(['A', 'B', 'C']):
+			print(i, value)
+
+列表生成式(List Comprehensions)
+	>>> [x * x for x in range(1, 11)]
+	[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+	>>> [x * x for x in range(1, 11) if x % 2 == 0]
+	[4, 16, 36, 64, 100]
+
+	列出当前目录下的所有文件和目录名
+	>>> import os # 导入os模块，模块的概念后面讲到
+	>>> [d for d in os.listdir('.')] # os.listdir可以列出文件和目录
