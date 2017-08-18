@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # filter求素数
+
 def main():
     for n in primes():
         if n < 1000:
